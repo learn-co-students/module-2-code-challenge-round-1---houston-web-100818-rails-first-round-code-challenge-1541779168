@@ -1,0 +1,5 @@
+<h2><%= @heroine.super_name %></h2>
+<h3>True Identity: <%= @heroine.name %></h3>
+<p>Special Power: <%= link_to @heroine.power.name, @heroine.power %></p>
+<%= image_tag(@heroine.power.img_url, width: '150') %><br /><br /><br /><br />
+<%= link_to "see all heroines! yay!", heroines_path%>
