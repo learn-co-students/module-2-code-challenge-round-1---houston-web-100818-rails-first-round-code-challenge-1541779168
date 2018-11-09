@@ -12,7 +12,7 @@ class PowersController < ApplicationController
     
   def create
     @power = Power.create(power_params)
-    redirect_to @power
+    redirect_to power_path(@power)
   end
     
   def show
