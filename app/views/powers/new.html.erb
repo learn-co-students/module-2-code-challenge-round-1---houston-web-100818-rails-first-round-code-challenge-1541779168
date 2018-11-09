@@ -1,0 +1,12 @@
+<h1>Create Power</h1>
+
+<%= form_for @power do |form| %>
+  <%= form.label 'Name' %>: 
+  <%= form.text_field :name %><br />
+  <%= form.label 'Description' %>: 
+  <%= form.text_field :description%><br />
+  
+
+  <br />
+  <%= form.submit %>
+<% end %>
