@@ -1,0 +1,11 @@
+<h1>Create a Heroine</h1>
+<%= form_for @heroine do |h| %>
+<%= h.label "Name: " %> <br>
+<%= h.text_field :name %><br>
+<%= h.label "Super Name:"%><br>
+<%= h.text_field :super_name %><br>
+<%= h.label "Super Power"%><br>
+<%= h.collection_select(:power_id, Power.all, :id, :name)%><br>
+<%= h.submit %><br>
+
+<% end %>
