@@ -1,0 +1,18 @@
+<h1>Create Heroine</h1>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<%= form_for Heroine.new do |f| %>
+  <%= f.label 'Name' %>
+  <%= f.text_field :name %>
+  <br />
+  <%= f.label 'Super Name' %>
+  <%= f.text_field :super_name %>
+  <br />
+  <%= f.label 'Power' %>
+  <%= f.collection_select(:power_id, Power.all, :id, :name) %>
+  <br />
+  <%= f.submit %>
+<% end %>
