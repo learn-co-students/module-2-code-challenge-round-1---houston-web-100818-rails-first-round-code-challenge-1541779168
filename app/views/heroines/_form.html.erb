@@ -1,0 +1,16 @@
+<br>
+<%= form_for @heroine do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :super_name %>
+  <%= f.text_field :super_name %>
+  <br>
+  <br>
+  <%= f.label :power_id %>
+  <%= f.collection_select :power_id, @powers, :id, :name, include_blank: "Please Select" %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
