@@ -1,0 +1,16 @@
+<% if @heroine.errors.any? %>
+    <h5>That alias is taken, please choose another</h5>
+<% end %>
+
+<%= form_for @heroine do |form| %>
+<%= form.label "Name" %>
+<%= form.text_field :name %>
+<br>
+<%= form.label "Alias" %>
+<%= form.text_field :super_name %>
+<br>
+<%= form.label "Superpower" %>
+<%= form.collection_select :power_id, Power.all, :id, :name %>
+<br>
+<%= form.submit %>
+<% end %>
