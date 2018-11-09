@@ -1,0 +1,26 @@
+<h1>Create a Heroine</h1><br/>
+
+<% if @heroine.errors.any? %>
+<div id="error_explanation">
+  <h3><%= pluralize(@heroine.errors.count, "error") %> prohibited creation: </h3>
+  <ul>
+    <% @heroine.errors.full_messages.each do |m| %>
+      <li><%= m %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<%= form_for(@heroine) do |f| %>
+
+  <p><%= f.label :super_name %><br/>
+  <%= f.text_field :super_name%><br/></p>
+
+  <p><%= f.label :name %><br/>
+  <%= f.text_field :name%><br/></p>
+
+  <p><%= f.label "Superpower "%><br/>
+  <%= f.collection_select :power_id, @powers, :id, :name %><br/></p>
+
+  <%= f.submit %>
+<% end %>
+
