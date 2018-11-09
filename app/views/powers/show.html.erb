@@ -1,6 +1,6 @@
 <h2><%= @power.name %></h2>
 <p><i><%= @power.description %></i></p>
-<%= image_tag(@power.img_url, width: '150') %>
+<%= image_tag(@power.img_url, width: '150') %><br /><br />
 <h3>Heroines with <%= @power.name %>:</h3>
 <ul>
   <% @power.heroines.each do |h| %>
