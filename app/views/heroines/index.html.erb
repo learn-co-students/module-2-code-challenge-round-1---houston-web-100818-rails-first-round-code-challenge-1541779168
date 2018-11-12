@@ -1,4 +1,10 @@
 <h2>All Heroines</h2>
+
+<%= form_with url: heroines_path, method: 'get' do |f| %>
+  <%= f.text_field :search %>
+  <%= f.submit %>
+<% end %>
+
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
